@@ -45,7 +45,7 @@ k_configs = {
     '4x4x12': {'kpts': (4, 4, 12), 'nk': 100},
 }
 nodes_list = [1, 2]  # Start with very small test to verify quotas
-devices = ['CPU', 'GPU']
+devices = ['CPU']  # Focus on CPU jobs since GPU quota is exhausted
 
 # Configurations for bar plot
 materials = {'MySystem': structure}
@@ -53,8 +53,8 @@ functionals = ['PBE', 'HSE06']
 node_for_bar = 1
 
 # Assume these settings
-vasp_cpu_cmd = 'srun vasp_std'
-vasp_gpu_cmd = 'srun vasp_gpu'
+vasp_cpu_cmd = '/usr/local/vasp/bin/vasp_std'
+vasp_gpu_cmd = '/usr/local/vasp/bin/vasp_gpu'
 gpus_per_node = 4
 cpus_per_node = 40
 container_image = 'us-central1-docker.pkg.dev/vasp-scaling-analysis/vasp-repo/vasp-pymatgen:latest'  # Docker image
