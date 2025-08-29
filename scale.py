@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 # GCP Project and configs
 PROJECT_ID = 'vasp-scaling-analysis'  # GCP project ID
-LOCATION = 'us-central1'  # GCP region for Batch jobs
+LOCATION = 'us-east1'  # GCP region for Batch jobs
 BUCKET_NAME = 'vasp-scaling-outputs'  # GCS bucket for outputs
 BATCH_CLIENT = batch_v1.BatchServiceClient()
 STORAGE_CLIENT = storage.Client()
